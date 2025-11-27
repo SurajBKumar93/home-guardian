@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { User } from "@supabase/supabase-js";
-import { Home, Package, Plus, Settings, LogOut } from "lucide-react";
+import { Home, Package, Plus, Settings, LogOut, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -68,6 +68,7 @@ const Layout = ({ children }: LayoutProps) => {
     { icon: Home, label: "Dashboard", path: "/" },
     { icon: Package, label: "Items", path: "/items" },
     { icon: Plus, label: "Add Item", path: "/add-item" },
+    { icon: Crown, label: "Premium", path: "/premium" },
     { icon: Settings, label: "Settings", path: "/settings" },
   ];
 
