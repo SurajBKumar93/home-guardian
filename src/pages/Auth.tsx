@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { Package } from "lucide-react";
+import GoogleSignIn from "@/components/GoogleSignIn";
+import AppleSignIn from "@/components/AppleSignIn";
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -115,6 +118,23 @@ const Auth = () => {
               {loading ? "Please wait..." : isLogin ? "Sign In" : "Sign Up"}
             </Button>
           </form>
+
+          {/* Social Login */}
+          <div className="mt-6">
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <Separator />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-card px-2 text-muted-foreground">Or continue with</span>
+              </div>
+            </div>
+            <div className="mt-6 space-y-3">
+              <GoogleSignIn />
+              <AppleSignIn />
+            </div>
+          </div>
+
           <div className="mt-6 text-center">
             <button
               type="button"

@@ -10,6 +10,7 @@ import AddItem from "./pages/AddItem";
 import ItemsList from "./pages/ItemsList";
 import ItemDetail from "./pages/ItemDetail";
 import Settings from "./pages/Settings";
+import Premium from "./pages/Premium";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,6 +60,14 @@ const App = () => (
             element={
               <Layout>
                 <Settings />
+              </Layout>
+            }
+          />
+          <Route
+            path="/premium"
+            element={
+              <Layout>
+                <Premium />
               </Layout>
             }
           />
